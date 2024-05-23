@@ -112,7 +112,7 @@ API Testing: Client tarafından request server'a gönderilir. Server expected da
 Database: Belirli tablolar içerisinde yapılandırılmış verileri saklar. Veri depolama, Veri erişim ve kontrolü, Bilgi güvenliği işlemleri yapılabilir. 
 Database Testing: Veri tabanı bileşenlerini test etmektir.
 JDBC: java programlarının veri tabanlarıyla etkileşimde bulunmasını sağlar.
-International Software Testing Qualifications Board(USTQB): Yazılım test serifikasyon programıdır.
+International Software Testing Qualifications Board(ISTQB): Yazılım test serifikasyon programıdır.
 
 
 

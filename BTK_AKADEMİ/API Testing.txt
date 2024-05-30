@@ -1,0 +1,31 @@
+API Testing: Client tarafından request server'a gönderilir. Server expected datayı inceler. Server Actual Data geri döndürür.
+Soap Apı: İnternet üzerinden belirli bilgileri ya da mesajları aktarma protokolüdür. XML formatlı veriler tutar. .net, java, sap ile kullanılır.
+TCP(Transmission Control Protocol): Verinin iletimden önce paketlere ayrılmasını ve karşı tarafta bu paketlerin yeniden düzgün bir şekilde birleştirilmesini sağlar.
+IP (Internet Protocol): İletilen paketlerin istenilen ağ adresine yönlendirilmesini kontrol eder.
+Rest Apı: Client ile server arasında hızlı ve kolay şekilde iletişim kurmayı sağlayan bir servistir. Veri transfer yöntemidir. HTPP üzerinde minimum içerikle veri gönderir. Xml ve Json ile uygulamalar iletişim sağlar.
+
+Web Servis: İki makinenin bir ağ üzerinden birbirleri ile iletişimini sağlar. Sadece ağ üzerinden erişilebilir. Sadece soap, rest ve xml vardır. Http metotları kullanılır.
+Web Servis Kullanım Şekilleri: Uygulama üzerinde sürekli yapılacak işleri otomatikleştirir. Farklı uygulamalar ile veri alışverişi yapabilir.
+Web Servis Kullanım Standartları: Soap, UDDI(Ağ üzerinde hangi servislerin kullanılabileceğini listeleyen yazılımdır), WSDL(Xml formatlı verilerin ne iş yaptığını belirleyen dil, PortType:Web servis metotları, Binding:Veri formatı)
+API ve Web Servis İlişkisi: Her apı web servis değildir internetten erişilemeyebilir. Her web servis bir apidir internetten erişilir.
+Soap Servis: Http ve Tcp kullanır. Sadece XML verileri(Method hazırlama,cevap,hata mesajları) işler.
+Soap Servis Bölümleri: Envelope(Servis istek ve cevaplarını kapsar), Header(meta dataları içerir), Body(Veri gönderme parametrelerini içerir), Fault(İstek sonucu hata mesajları)
+RestFul Servis: Servis oluştumak için programlama dilini ihtiyaç duymaz. Rest ile çalışmak için URL ihtiyaç vardır.
+RestFul Servis Gereksinimleri: 
+UniForm İnterface(Tek tip arayüz):İstemci ile sunucu arasındaki arayüzdür. Sunucuya yapılan isteğin tek kaynağı olmalıdır. 
+Client-Server Mimarisi: Rest uygulamaları verileri yönetir. Kullanıcı etkileşimi olan istemci ile server iletişim kurar. İstemci sunucuyu bilmez, sunucu sadece gelen isteğin sonucunu döndürür.
+Casheable(Ön bellek): Sunucu verdiği cevapların ön belleklenebilir olup olmadığını belirtmelidir. Ön belleğe alınmayan bilgiler elden çıkarılır. Böylece eski data kullanılmamış olur.
+Stateless(Durumsuzluk): Sunucu istemci ile ilgili veri tutmaz. Token ile veri alışverişi gerçekleşir.
+layered System(Katmanlı Sistem): İstemci sunucu yapısındaki hangi katmana bağlandığını bilmez. Güvenlik veya performans arttırmak için Load-Balancer(Yük dengeleyici), Proxy kullanılabilir.
+Code on Demand(Talep üzerine kod): Sunucu çalıştırılabilir kodu göndermek isteyebileceği ile ilgilidir.
+Rest Servis HTTP Metodları: 
+Get(Veri listeleme), Post(Veri eklemek için kullanılır), Put(Veri güncellemek için kullanılır), Patch(Verinin sadece bir parçasını günceller), Delete(veriyi siler), Options(Bilgi iletir)
+HTTP Durum Kodları: 1xx(Bilgilendirici kodlar), 2xx(Başarılı Kodlar), 3xx(Yönlendirme Kodları), 4xx(İstemci Hata Kodları), 5xx(Sunucu Hataları)
+100-Continue(İstek başarılı devam ediliyor), 200-OK, 201-Created, 204-No Content, 401-Unauthorized(Yetki bilgileri yanlış gönderilirse), 403-Forbidden(Korumalı kaynağa yetkisiz erişmeye çalışma), 500-Internal Server Error
+SOAP vs REST: Güvenlik(SOAP ile kolay ve hızlı), Format(REST ile Json,Xml,Text), Boyut ve Hız(Rest Json ile hızlıdır)
+
+API Testing: Client tarafından request server'a gönderilir. Server expected datayı inceler. Server Actual Data geri döndürür.
+API Test Otomasyonu: İşlemler, bilgilerin tutulması, şifre kontrolü, para transferi gibi işlemlerin testini yapar.
+Integration(Entegrasyon) Testing: Unit testleri yapılan birimlerin birlikte sağlıklı çalışıp çalışmadığını test etmektir. Big bang testi tüm modülleri birlikte test eder. Incremental Testing kademeli olarak test eder.
+Yük testi: Bir bileşenin veya sistemin artan yük karşısındaki davranışlarının testidir. Tepki süresi, İşlem hızı, Sistem kapasitesi, Hata durumları değerlendirilenileşenlerdir.
+Regression(Gerileme) Testing: Yazılımın veya yazılım ortamının değiştiğinde sistemin çalışıp çalışmadığını test eder. Hediye kartı satın almanın sisteminin çalışmasını bozuyor mu gibi düşünülebilir.

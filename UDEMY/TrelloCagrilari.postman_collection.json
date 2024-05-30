@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "b8d36b88-c081-4fba-99e9-99d5f96d678a",
+		"name": "TrelloCagrilari",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35053683"
+	},
+	"item": [
+		{
+			"name": "Trello Create Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let response=pm.response.json();\r",
+							"\r",
+							"let a=\"enes\";\r",
+							"let b= \"enes\";\r",
+							"pm.test(\"a esittir b\",function(){\r",
+							"pm.expect(a).is.eql(b);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Trello isim kontrolu\",function(){\r",
+							"pm.expect(response.name).is.eql(pm.environment.get(\"panoAdi\"))\r",
+							"pm.expect(response.closed).to.be.false\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Pinned control false olmali\",function(){\r",
+							"    pm.expect(response.pinned).to.be.false\r",
+							"})\r",
+							"\r",
+							"pm.environment.set(\"panoId\",response.id);\r",
+							"\r",
+							"pm.test(\"pano adi kontrolu\",function(){\r",
+							"    pm.expect(response.name).is.eql(pm.environment.get(\"panoAdi\"))\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"panoAdi\",\"Udemy Trello\" + parseInt(Math.random()*100));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/1/boards/?name={{panoAdi}}&key={{apiKey}}&token={{apiToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{panoAdi}}"
+						},
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello Create List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let response=pm.response.json();\r",
+							"\r",
+							"pm.environment.set(\"listId\",response.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/1/lists?name=UdemyList&idBoard={{panoId}}&key={{apiKey}}&token={{apiToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "UdemyList"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{panoId}}"
+						},
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello Create Card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let response =pm.response.json();\r",
+							"\r",
+							"pm.environment.set(\"cardId\",response.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/1/cards?idList={{listId}}&key={{apiKey}}&token={{apiToken}}&name=Postman",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "{{listId}}"
+						},
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						},
+						{
+							"key": "name",
+							"value": "Postman"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello Delete Card",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/1/cards/:id?key={{apiKey}}&token={{apiToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{cardId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello Update Card",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/1/cards/:id?key={{apiKey}}&token={{apiToken}}&name=POSTMAN",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						},
+						{
+							"key": "name",
+							"value": "POSTMAN"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{cardId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello Delete Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/1/boards/:id?key={{apiKey}}&token={{apiToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{apiToken}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{panoId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

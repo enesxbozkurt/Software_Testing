@@ -1,0 +1,57 @@
+Backend: Arayüz
+Ön Yüz Testleri: Uygulamayı son kullanıcı gibi kullanıp test etmektir.
+Uygulama Arayüz Testleri: Ön yüz ile veri tabanı arasındaki iletişimi sağlar. Kullanıcın görmediği arka plandaki yazılımın işleyişi ve arayüzün işleme mantığının oluşumu test edilir.
+API Testing: Uygulama arayüzü, ön yüz ile veri tabanı arasındaki iletişimi sağlar. Yazılım sürecinde ilk oluşturulan katmandır.
+HTTP: Veri transfer methodudur. Ön yüzün arayüz ile iletişimini sağlar.
+API URL: Hangi arayüze çağrı yapılacağını belirtir.
+Restful HTTP Method: En yaygın kullanılan arayüz mimarisidir. Get-Post-Put-Patch-Delete
+Payload(Gönderilen Veri): Api çağrısı ile gönderilecek bilgidir.
+Response Code(Beklenen Sonuç):Ön yüzün başarılı bir sonuç olduğunu anlaması için 2xx ile başlayan kod döner. Eğer 4xx veya 5xx ile başlayan kod dönerse sonuç hatalı demektir.
+Response Message(Cevap): Success-200 Hesap blokeli-422 gibi hata kodlarının metinsel karşılığıdır.
+Response Result(Cevap Sonucu): 200 Başarılı bir cevap döndü ve cevabın içindeki kodlar gösterilir. Hesapadı:birikim hesabı Hesap tutarı:100 gibi düşünülebilir.
+Get/Read Metodu: Serverdaki bilgiyi okumak için kullanılır.
+Post/Create: Veri tabanında bir kaynak oluşturmak için kullanılır(Kullanıcı hesabı oluşturmak gibi)
+Put/Update: Veri tabanında olan veriyi güncellemek için kullanılır.
+Delete: Veri tabanındaki veriyi silmek için kullanılır.
+
+https://john.doe@www.example.com:123/forum/questions/?tag=networking&order=newest#top
+https: Scheme
+john.doe: user info
+www.example.com: host
+123: Port
+john.doe@www.example.com:123: Authority(Base(Ana) URL)
+/forum/questions/: Path parametreleri
+?tag=networking&order=newest: Query parametreleri
+#top: Fragment
+Postman arayüzü: PreRequest- Çağrı öncesi çalıştırılacaklar Test-Çağrı sonrası çalıştırılacak
+Değişkenler: Değerleri kaydetme, scriptler ile güncelleme, arayüz testlerini efektik şekilde kullanma gibi işlemlere olanak tanır.
+Enviroment(Ortam) Değişkenleri: Sadece tek projede kullanılacak değişkenlerdir
+Global Değişkenler: Bütün projede ihtiyaç duyulan değişkenlerdir
+Collection Runner: Bu sekmede methotlar otomatik olarak çalıştırılabilir
+
+Json Çözümleme: pm.response.json()
+XML Çözümleme: xml2Json(responseBody)
+HTML Çözümleme: cheerio.load(pm.response.text())
+Text Çözümleme: pm.response.text()
+Let: ile değişken oluşturulabilir
+Chai kütüphanesi: Postmanda test yazımı için kullanılır
+
+Pre-script: Çağrı öncesi, çağrıları dinamik yapmak için kullanılır
+
+Postman Monitors: Hazırlanan testler otomatize edilerek istenilen aralıklarla koşulur. Başarısız test için mail alınır. 
+
+Newman: Postman testlerini komut satırı üzerinden koşmaya olanak tanır. Komut satırında raporlama yapar. Sürekli entegrasyon için idealdir.
+public link: Cmd satırında collection linki ile testler koşulur. Her collection güncellemesinde linkin yenilenmesi gereklidir.
+export: Dosya dışa aktarımı ile github gibi platformlarda paylaşılarak test süreçleri oluşturulabilir ve testler koşulabilir.
+Api arayüz: Postman linki ile test yaptığımızda değişiklikler otomatik olarak kaydedilir. Değişkenler test sırasında oluşturulur. Eğer bir ortam değişkeni var ise newman'a tanıtılmalı
+
+Sürekli entegrasyon: Kod üzerinde yapılan değişikliklerin ardından sistemin çalışır durumda olduğunu yapılan değişikliğin bir soruna yol açıp açmadığını tespit etmek için kullanılır.
+Jenkins: Projeyi sürekli olarak test etmemizi sağlar.
+Build(Kod Derlemesi Yapılır) --> Deploy(Değişen kodların ortamlara dağıtılması) --> Test(Değişikliklerin hata çıkarmaması kontrolü) --> Release(Yayınlama)
+job: Jenkins programının kendi projesidir.
+node: Job'un üzerinde çalıştığı sunucudur.
+pipeline: Testlerin ardışık konumlandırılmasıdır.
+Junit: Test raporlamasını gerçekleştiren araçtır
+
+
+

@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "c4586781-1a6c-46ab-9eed-eb12c7740c0e",
+		"name": "Nasa Arayüz Çağrıları",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35053683"
+	},
+	"item": [
+		{
+			"name": "NasaArayuzCagrisi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?api_key={{apiKey}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DunyayaYakinObjeler",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/neo/rest/v1/feed?start_date=2024-1-1&end_date=2024-1-5&api_key={{apiKey}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"neo",
+						"rest",
+						"v1",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2024-1-1"
+						},
+						{
+							"key": "end_date",
+							"value": "2024-1-5"
+						},
+						{
+							"key": "api_key",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

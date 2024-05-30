@@ -1,0 +1,118 @@
+Yazılım Testi: Yazılım işlevlerini doğru şekilde yerine getirmesi  - Kullanılabilirliği - Güvenilirliği - Performansı ve diğer özellikleri test edilerek sorunsuz çalışmasını sağlamaktır
+Yazılım Uzmanı: Yazılımı dizayn etmek ve programı yapmakla görevlidir. 
+İş Analisti: Kurumların iş süreçlerini değerlendirme, gereklilikleri öngörme ve çözümler üretme faaliyetlerini yürütür. Yazılım uzmanları ile birlikte çalışır.
+Ürün Sahibi: Ürün veya hizmet ile ilgili kullanıcıların ihtiyaç ve beklentilerini anlayarak geliştirme takımına aktarır. Talepleri netleştirip sıraya koyar.
+Proje Yöneticisi: Proje ekibini organize ederek istenen projenin başarılı şekilde ve zamanında bitmesinden emin olurlar.
+Yazılım Test Uzmanı: Yazılım ürünü oluşurken her aşamayı test ederek ürünün hatasız bir biçimde son kullanıcıya iletilmesini sağlar.
+Tüm proje ekibi yazılımın test edilmesinden sorumludur. Yazılımın kaliteli olmasını ve kullanıcı beklentilerini karşılamasını takip eder.
+
+Software Development Life Cycle(Yazılım geliştirme yaşam döngüsü): Yüksek kaliteli yazılım ve müşteri beklentilerini karşılamak için bir süreçtir. Planlama-Analiz-Geliştirme-Test-BakımVeDestek
+Planlama: Bu proje ile ne başarmak istiyoruz? sorusuna yanıt aranır. Sistemin ihtiyaçları belirlenir, projenin uygulanabilirlik çalışmaları, proje planı oluşturma
+Analiz: Bu proje ile istediğimiz noktaya nasıl gelebiliriz? sorusuna yanıt aranır. Son kullanıcı gereksinimi analizi, süreç diyagramları, yazılım mimarisinin yol haritasını oluşturma
+Geliştirme: Yazılım oluşturulmaya başlanmıştır. Kod yazılımı ve projenin alt yapısı oluşturulur.
+Test: İstediğimiz sonuca ulaşabildik mi? sorusuna yanıt aranır. Test adımlarının oluşturulması ve test edilmesi.
+Bakım ve destek: Uygulama canlıya alınmıştır. Kullanıcılardan gelen geri bildirimlere göre hatalar düzeltilir.
+
+Test uzmanının sorumlulukları: 
+Planlama(Neyi-Nasıl test edeceğiz): Test edilecek alanlar, Hangi ortamlarda test yapılacağı, Hangi cihazların kullanılacağı, Hangi koşulda testin bitirileceği planlanır.
+Tanımlama: Test adımlarının tasarımı ve adımların yazılması hedebeklenir.
+Test koşumu: Test uzmanı test adımlarını koşar uygulamanın beklenen sonucu verip vermediğini kontrol eder. Önemli öncelikte(High Priority) olan test adımları ilk önce koşulmalıdır.
+Testi Tamamlama: Testlerin bittiğinden emin olan uzman belirtir ve ürün kullanıcıya sunulmaya hazır hale gelir.
+
+Bug: Yazılımda meydana gelen hatalardır. Test uzmanı hataları en erken zamanda bulmalıdır.
+Görsel Hatalar: Kesilmiş görüntüler ve hizalama sorunları
+Fonksiyonel Hatalar: Kullanıcının bir sonraki sayfaya geçememesi gibi hatalardır. Hızlı bir şekilde çözülmelidir.
+Performans Hataları: Sitenin 10 saniyeden fazla sürmesi gibi hatalardır.
+Hata Raporu: Basit ve anlaşılır olmalıdır. Hata ile ilgili kısa açıklama yazılır. Hata alınan adımlar sırasıyla yazılır. Gerçekleşen ve Beklenen sonuç bilgileri verilir. Ekran görüntüsü veya video eklenir.
+Hata Yaşam Döngüsü: Hatanın bulunmasından çözümüne kadar geçen süredir. Hata bulunur, yazılımcıya atanır, yazılımcı kontrol eder, hata yok ise reddedilir var ise çözülür ve test aşamasına gönderilir. 
+Test uzmanı test eder hata var ise yeniden açar yok ise doğrulanır ve kapatılır.
+
+Yazılım Gereksinim Analizi: Üründen nelerin beklendiğinin net ve açık bir şekilde ifade edilmesidir. İş analistleri ya da proje yöneticileri oluşturur. 
+Test uzmanının gereksinim analizindeki görevleri: Gereksinimleri okumak ve test etmek, Analiste ve yöneticiye yardımcı olmak, Hataları erkenden bulmak.
+Test Seneryosu: Uygulamayı test etmek amacıyla analiz dökümanı baz alınarak oluşturulur. Uygulamanın beklenen sonucu verip vermediğini bulmak için kullanılabilir.
+Test açıklaması, Test adımları, Önşartlar, Test datası, Beklenen sonuç, Öncelik, Test koşum ortamları Test seneryosu adımlarıdır.
+Test kontrol listesi: Tecrübeli test uzmanı yazılımı test etmek için kural veya kriterlerden oluşan liste kullanır. Bu yöntem çevik proje yönetiminde görülür.
+
+Unit(Birim) Testing: Bileşenlerin tek başına test edilmesidir. Sayısal olarak en fazla yapılan testtir. Beyaz kutu testidir.
+Integration(Entegrasyon) Testing: Unit testleri yapılan birimlerin birlikte sağlıklı çalışıp çalışmadığını test etmektir. Big bang testi tüm modülleri birlikte test eder. Incremental Testing kademeli olarak test eder.
+User Interface(UI)Testing: Kullanıcın yazılım, cihaz veya sistemle etkileşime girmesini sağlayan metinsel veya grafiksel arayüzlerdir.
+System Testing: Sistemin istenilen gereksinimleri karşılayıp karşılamadığını test eder. 50 farklı testin bir araya gelmesiyle oluşabilir. Kullanıcı bakışıyla hareket eder.
+Ideal Software Testing Pyramid: Automated Unit Test - Automated Component Tests - Automated API Tests - Automated Integration Tests - Automated GUI Tests - Manual Session Based Testing. 
+Bu testler Otomasyon test uzmanı, yazılımcılar ve manuel testçiler tarafından yapılır.
+Functional Testing: Bir sistemin özelliklerini test eder. Uygulamanın kullanışlı olmasına katkı sağlar. Manuel olarak test edilebilir. 
+Non-Functional Testing: Sistemin işleviyle ilgili olmayan güvenilirlik, verimlilik, kullanılabilirlik, sürdürülebilirlik, taşınabilirlik. Müşteri beklentisine göre yapılır.
+Kara Kutu Testleri:  Sistemin çalışma mantığı dikkate alınmadan fonksiyonel ve fonksiyonel olmayan şekillerde test edilmesidir. Son kullanıcı açısından kusursuz çalışmasını sağlamaktır. Kod bilgisi gerekmez.
+Denklik Paylarına Ayırma(Equivalence Partitioning):Geçerli ve geçersiz veriler vardır. Sistemin ya da birimin kapsamına giren değerlere geçerli kapsam dışı olan verilere geçersiz veriler denir. 
+Sistem 1-100 arasında veri kabul ediyorsa -1 veya 101 geçersiz veridir.
+Sınır Değer Analizi(Boundary Value Analysis):Sınır değerlerine göre tasarlanmıştır. En küçük ve en büyük değerlerin 1 fazlası ve bir eksiği ile kontrol edilir.
+Karar Tablosu Testleri(Decision Table Testing):Farklı test koşullarının kombinasyonlarını test etmekdir. Karar tablosu oluşturulurken yazılımın girdilerini ve sonuçta ortaya çıkan çıktıları tanımlar. Kaç koşul varsa 2 üzeri koşul sayısı ile hesaplanır. 3 koşul var ise 2 üzeri 3 = 8 sonuç vardır.
+Durum Geçiş Testleri(State Transition Testing):Yazılımın ilgili durumlara nasıl girdiğini, çıktığını ve aralardaki geçişi gösterir. Örnek: Lamba açıkken kapalıya, kapalıyken açığa, açıkken açığa(hata), kapalıyken kapalıya(hata), n switch tekniği lambanın kapalıdan açığa ve tekrar başlangıç durumu kapalıya dönmesi bir durumdur 2 adımı ifade eder.
+Kullanım Seneryosu Testleri(User Case Testing):Farklı profildeki kullanıcıların yazılımla etkileşimini modellemek için kullanılır. Atm'ye giriş örnek olabilir. 
+Hata Tahminleme(Error Guessing):Test uzmanının bilgilerine dayanır. Uygulamanın geçmişte nasıl çalıştığı, Yazılımcıların sıkça yaptığı hatalar, Diğer uygulamalarda oluşan hatalar tecrübeleridir.
+Keşif Testi(Explaratory Testing):Resmi olmayan teslerdir. Kaydedilir, dinamik olarak değerlendirilir. Test uzmanının yaratıcılık alanına bırakılmıştır. Test edilecek alanlar, harcanacak süre ve test amacı başlamadan belirlenir.
+Kontrol Listesine Dayalı Testler(Checklist Testing):Tecrübe, kullanıcı isteği, yazılımın nasıl başarısız olabileceği düşünülerek hazırlanır. Çevik yönetimi kullanan firmalarca tercih edilir.
+Beyaz Kutu Testleri: Sistemin iç yapısının analizine bağlı olarak test edilmesidir. Kodların kusursuz çalışmasını sağlamaktır. Kod bilgisi şarttır.
+
+Pozitif Testler(Happy Path): Uygulamanın beklendiği gibi çalışıp çalışmadığını test eder. 
+Negatif Testler: Bileşen veya sistemin çalışmadığı noktaları göstermeyi amaçlar. Sadece olumlu sonuç verecek testler yerine negatif sonuç verecek testler de yapılır.
+Smoke(Duman) Testing: Bir üründe hatayı en hızlı biçimde bulmak için yapılır. Her gün yapılması önerilir. Zaman ve kaynak israfını önler. Yazılımcılar ve test uzmanları tarafından test edilir.
+Sanity(Mantık) Testing: Yeni bir sürüm gelip hata çözün sonrasında hataların çözülüp çözülmediğini kontrol etmektir. Sadece kod değişimi yapılan kısım kontrol edilir. Test uzmanı tarafından geçekleştirilir.
+Regression(Gerileme) Testing: Yazılımın veya yazılım ortamının değiştiğinde sistemin çalışıp çalışmadığını test eder. Hediye kartı satın almanın sisteminin çalışmasını bozuyor mu gibi düşünülebilir. Yoğun kullanılan alanlar, Ana fonksiyonlar, Entegrasyonlar test edilir.
+Risk:Kullanıcının karşılaşmaması gereken durumla karşılaşmasıdır. Risk=Etki*Olma Olasılığı. Risk düşük ise ürün iş analistine sunulur ve genelde canlıya taşınır.
+Risk Bazlı Test:Gelecekte olumsuz sonuçlara yol açacak bir olayın gerçekleşme olasılığını içerir.
+Ürün Risk Örnekleri:Yazılım fonksiyonlarını yerine getirememe, Hesaplama yanlışları, İşlem sürelerinin uzaması, Kullanıcı beklentirlerini karşılayamama
+Proje Risk Örnekleri:Parasal kaynak yetersizlikleri, Geç yapılan değişiklerin yol açtığı tekrarlanması gereken işler, Gereksinim yanlışlıklarıdır.
+Proje yöneticileri proje risklerinin sorumluluklarını alır. Test uzmanları ürün riskini en aza indirmekle sorumludur.
+Statik Test: Yazılımın veya bileşenlerin manuel incelenmesidir. Durumu kavramak İş gereksinimleri, Epikler, User Storyler, Tasrım, Kod incelemeleridir. 
+Resmi Gözden Geçirme Adımları: Planlama, Gözden geçirmenin başlatılması, Bireysel gözden geçirme, Bulguların iletilmesi ve analizi, Hataların giderilmesi ve raporlama
+Test Stratejisi: SDLC'de kullanılacak test tekniğinin ana hatlarını barındıran, test türlerini ve seviyelerini gösteren belgedir. Sabit kalmalıdır sık değişiklik yapılmaz. Testi kimin nasıl yapacağını ve riskleri gösterir.
+Test Yaklaşımı: Test Stratejisinin hayata geçirilmesidir.
+Test Tasarım Teknikleri: Sınır değer analizleri sınır değerlerine göre tasarlanan kara kutu tekniğidir. Denklik paylarına ayırma bir sistemin farklı tarayıcılarda nasıl çalıştığını test etmek gibidir.
+Kaliteyi sağlayan unsurlar: İş gereksinimleri, user story, kabul kriterleri, geliştirme(mühendisler beraber çalışmalı)
+Giriş Kriterleri: Testin gerçekleşmesi için gereken ön koşuldur. Test ortamının kullanılması, test araçları ve verilerin varlığı örnekleridir.
+Çıkış Kriterleri: Bir testi tamamlandı olarak tanımlamak için gereken koşullardır. Testlerin koşulmuş olması, hataların düşük olması, kalite özelliklerinin yeterli olması örnekleridir.
+Test Eforu Tahminlemesi: Teste başlamadan önce ne kadar sürede koşulacağını tahmin etmektir.
+Geliştirme Ortamı: Yazılımda yapılan değişikliğin ilk yüklendiği ortamdır. Statik testler için kullanılır.
+Test Ortamı: Uygulamanın daha dengeli bir ortamda çalışmasını sağlamaktır. Hata çıkma olasılığı yüksek fonksiyonların kontrolü sağlanır.
+Pre-Prod(Canlı Öncesi): Birebir canlı ortamın kopyasıdır ve sadece yeni değişiklikleri içerir. Test uzmanları son kontrolleri gerçekleştirir. Uygulama ile ilgili feedback alınır.
+Canlı Ortam: Son kullanıcının uygulamayı kullandığı ortamdır. Duman testi koşulur.
+
+Backend: Arayüz
+Ön Yüz Testleri: Uygulamayı son kullanıcı gibi kullanıp test etmektir.
+Uygulama Arayüz Testleri: Ön yüz ile veri tabanı arasındaki iletişimi sağlar. Kullanıcın görmediği arka plandaki yazılımın işleyişi ve arayüzün işleme mantığının oluşumu test edilir.
+HTTP: Veri transfer methodudur. Ön yüzün arayüz ile iletişimini sağlar.
+API URL: Hangi arayüze çağrı yapılacağını belirtir.
+Restful HTTP Method: En yaygın kullanılan arayüz mimarisidir. Get-Post-Put-Patch-Delete
+Payload(Gönderilen Veri): Api çağrısı ile gönderilecek bilgidir.
+Response Code(Beklenen Sonuç):Ön yüzün başarılı bir sonuç olduğunu anlaması için 2xx ile başlayan kod döner. Eğer 4xx veya 5xx ile başlayan kod dönerse sonuç hatalı demektir.
+Response Message(Cevap): Success-200 Hesap blokeli-422 gibi hata kodlarının metinsel karşılığıdır.
+Response Result(Cevap Sonucu): 200 Başarılı bir cevap döndü ve cevabın içindeki kodlar gösterilir. Hesapadı:birikim hesabı Hesap tutarı:100 gibi düşünülebilir.
+Get/Read Metodu: Serverdaki bilgiyi okumak için kullanılır.
+Post/Create: Veri tabanında bir kaynak oluşturmak için kullanılır(Kullanıcı hesabı oluşturmak gibi)
+Put/Update: Veri tabanında olan veriyi güncellemek için kullanılır.
+Delete: Veri tabanındaki veriyi silmek için kullanılır.
+
+Kullanıcı Tanıma: Testlere başlamadan önce Kullanıcı datalarına erişim var ise en sık kullanılan cihazların, tarayıcıların ve ekran çözünürlüklerinin listesi yapılarak test adımları hazırlanmalıdır.
+Uygulamaya Geniş Çerçeveden Bakma: Basit kullanıcı adımları yerine oluşması zor fakat kullanıcının yaşayabileceği durumlar test edilmeli. Yavaş internet ortamında test edilmeli.
+Çapraz Tarayıcı Testleri: Farklı tarayıcılarda uygulama test edilmeli. Genellikle görsel hatalar farklı tarayıcılarda meydana gelir.
+Keşfet: Web uygulamasında tüm sayfalarda göz gezdirilmeli, tüm linklere tıklanmalıdır. Kısaca duman testi yapılmalı ve uygulama akışı anlaşılmalıdır.
+Kullanılabilirlik Kontrolleri: Görsel ya da işitsel sorunlu kullanıcıların da kullanabilmesi için kontrol etmeliyiz.
+Tarayıcıda "Inspect" dedikten sonra "Console" alanında sayfada gözükmeyen ancak arka plandaki hataları bulabiliriz.
+Mobil Uygulama Testleri: İşletim sistemleri, ekran boyutu ve ekran çözünürlüğü dikkate alınmalıdır. Farklı bağlantı tipleriyle test edilmelidir.(wifi-3g-4g) 
+Gerçek mobil cihaz testi: Simülatörler, emülatörler ve gerçek mobil cihazlar ile test edilebilir. En sağlıklısı gerçek mobil cihazda test etmektir. Uygulama pil gereksinimi düşük olmalı. Yatay olarak kontrol edilmeli.
+Native Uygulamalar: Spesifik işletim sitemi için üretilmiş uygulamalardır. Hız ve performans olarak avantajlıdır.
+Web Uygulamalar: Mobil cihazlarda native benzeri deneyimler oluşturan uygulamalardır. Dezavantajı mobil cihazların tüm fonksiyonlarını kullanamazlar(Ekran aydınlatması, Titreşim özelliği vb.)
+Hibrid Uygulamalar: Hem native hem web uygulama kombinasyonudur. App store'da yer alır ve mobil cihazın bazı özelliklerinden faydalanabilir. Css ve html kodlarıyla oluşturulur.
+
+Jira: Backlog ürünün kapsamını ve yapılacak işleri yönetmek için kullanılır. İki haftalık sprintler scrum'ı oluşturur. Çevik projede story point 8 puanı aşmamalı.
+Confluence: Jira içinde olan uygulamada dökümantasyon, ekip çalışması ve bilgi paylaşımı kolayca yapılabilir.
+TestRail/TestLodge Web Uygulamaları: Test planı, Test seneryosu, Regresyon testi, Proje test yönetimi, test statüsü ve dökümantasyonu yapılan uygulamadır.
+Database: Belirli tablolar içerisinde yapılandırılmış verileri saklar. Veri depolama, Veri erişim ve kontrolü, Bilgi güvenliği işlemleri yapılabilir. 
+MindMap(MİRO)Analiz ve hatırlamya yardımcı olmak için fikirleri görsel olarak yapılandırır. Yaratıcılığı, problem çözümü, planlama ve test seneryosunu yazmayı kolaylaştırır.
+
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+Yazılım testi: 
+Yazılım işlevleri doğru şekilde yerine getirmesi  - Kullanılabilirliği - Güvenilirliği - Performansı ve diğer özellikleri test edilerek sorunsuz çalışmasını sağlamaktır
+UI Web Otomasyonu: Uygulamaların web tarafının testi
+UI Mobil Otomasyonu: Uygulamaların mobil tarafının testi
+API Test Otomasyonu: İşlemler, bilgilerin tutulması, şifre kontrolü, para transferi gibi işlemlerin testini yapar
+Database Otomasyonu: Arka plandaki bilgilerin güvenliği
+
+Software Development Life Cycle(Yazılım geliştirme yaşam döngüsü): Yüksek kaliteli yazılım ve müşteri beklentilerini karşılamak için bir süreçtir.
+Yazılım Hatalarının Sonuçları: Değer kayıpları, kullanıcı güvensizliği.
+SDCL Faydaları: 
+Proje takibini ve kontrolü sağlar.
+Planlama ve geliştirme aşamalarını yatırımcılar tarafından görülebilmesini sağlar.
+Projenin geliştirme hızını arttırır. 
+Ekibin iletişimini güçlendirir
+
+SDCL Aşamaları: 
+Planlama(Konsept Belirleme): Ulaşılmak istenen temel hedefler belirlenir.
+Analiz(Gereksinim Toplama): Proje yöneticileri veya iş analistleri hedefleri detaylandırır.  Bussiness Requirements ve Functional Requirements(Yazılımcıların Yapacakları) hazırlanır
+Tasarım: Arayüzler, altyapılar yazılımcılar tarafından belirlenir. 
+Uygulama: Functional Requirements dökümanında istenilen işlevleri gerçekleştirecek kodlar hazırlanır. Dökümana %100 uymalıdır. İş analisti ile fikir alışverişinde bulunmalıdır.
+Test(Kurulum ve Kontrol): Test yapılırken bulunan hatalar yazılımcılara gönderilip düzeltilmesi istenilir.
+Yayınlama ve Bakım: Kurulan sistem iş analistlerine sunulur.
+
+Yazılım geliştirme sadece developer'ların yaptığı bir iş değildir. 
+Kullanıcıların taleplerinden yüksek kaliteli yazılım elde edinceye kadar devam eder. 
+Uygulama kullanılmaya devam ettikçe SDCL devam eder.
+1-Product Owner(Proje Sahibi)
+2-Business Analyist(İş Analisti)
+3-Developer(Yazılım Geliştirici)
+4-Tester(Yazılım Test Uzmanı)
+
+Şelale Yöntemi: Her aşama bir önceki aşamadan sonra uygulanır. Bir aşama bittikten sonra geri dönülmez. Eskidir.
+Proje bilgisini aktarmak, yönetmek kolaydır. Küçük projelerde kullanılır. Değişim zordur. Kullanıcı talebi etki etmez.
+Analysis(Analiz)
+Design(Tasarım)
+Implementation(Kodlama)
+Testing(Test)
+Deployment(Entegrasyon)
+Maintenance
+
+Agile(Çevik) Yöntemi: En çok kullanılan yöntemdir. Kısa ekip toplantıları verimliliği arttırır. Sutherland "scrum" ekip çalışmasını ortaya koydu. 
+Bu yöntem projenin zamanında, az bütçeyle ve daha az hatayla tamamlanmasını sağladı.
+Rugby: Takım mesafenin tümünü bir birim halinde ilerleyerek hep daha fazla büyümesini sağlar.
+Sprint: Kısa süreli ataklarla projeyi ileri taşımak hedeflenir. Scrum toplantıları sayesinde üretkenlik ve verimlilik artar.
+Agile Prensipleri:
+Yazılımların erken ve sürekli teslimatla müşteriyi memnun edilir.
+Değişen gereksinimler projeye dahil edilir.
+Üzerinde çalışılan yazılımlar birkaç hafta arayla yayınlanır.
+İş adamları ve geliştiriciler proje boyunca her gün birlikte çalışmalıdır.
+Projeyi motive olan kişilerle oluşturulmalıdır.
+Geliştirme ekibine yapılacaklar yüz yüze söylenmelidir.
+Sadelik esastır tasarım iyi olmalıdır.
+Ekip düzenli aralıklarla nasıl daha verimli olabileceğini düşünür.
+
+Agile Terimleri:
+Scrum: Bütünü parçalamaya ve tekrara dayalıdır. Scrum takımı, toplantılar(Projenin gidişatı takip edilir), dökümanlar.
+Product Backlog: Proje bitinceye kadar yapılması gereken iş listesidir. Product owner iş listesinin sıralamasını yapar. User story, detaylandırılmış feature ve parçalanmamış epicler bulunur.
+Sprint Backlog: Geliştiriciye yapabileceği kadar iş verilir. Takım işlere ne kadar sürede yapılacağına dair puanlama yapar
+Feature(Özellik): Büyük bir sistemin parçalanmış iş bölümüdür. Birkaç sprint ile bitirilebilir. 
+Epic(Destan): Büyük iş parçalarıdır.  
+
+Yazılım testleri: Projenin başından sonuna kadar devam eden süreçtir. İş analiştinin sunduğu Requirements  üzerine testler yapılırken test uzmanı olası seneryoları düşünmelidir. 
+Software Testing Life Cycle(STLC): Temel amaç yazılımdaki kusuru veya hatayı en erken zamanda testip etmek, belgelemek ve çözülmesini sağlamaktır.
+Gereksinim Analizi: İstenilen yazılımın tüm detaylarıyla aktarılmasını sağlamaktır. 
+User Story: Özelliğin kullanıcı tarafından farklı biçimde istenmesi işlemidir.(ŞU faydayı sağlamak için BU özelliğin olmasını istiyorum)
+Test Planı Oluşturma: Test uzmanı planı oluşturur. Test stratejisi, Test edilecek bileşenler, Giriş ve çıkış kriterleri, hata yönetimi, risk yönetimi, görev ve sorumluluklar, test ortamı ve araçları, test takvimi bilgilerini içerir.
+Test Seneryosu Geliştirme: test sürecinin tamamını planlamak. Yazılımın gerektiği gibi davranıp davranmadığı test edilir. Expected Result ve Actual Result belirlenir.
+Test Ortamı Kurulumu: Testin yapılması için gerek duyulan donanım, aygıt, simülatörler ve yazılım araçlarını kapsar.
+Testlerin Çalıştırılması: komut dosyalarının çalıştırılması, bakımı, raporlamaları aşamaları takip edilir. Jenkins gibi uygulamalarda üretilen yazılımlar test edilebilir.
+Test Döngüsü Kapanışı: Sonuçlandırma, arşivleme, değerlendirme gibi süreçlerdir. 
+Bug: Sistemin gerekli işlevini halletmesini engelleyen kusur.
+
+Functional Testing: Bir sistemin özelliklerini test eder. Uygulamanın kullanışlı olmasına katkı sağlar. Manuel olarak test edilebilir. 
+Non-Functional Testing: Sistemin işleviyle ilgili olmayan güvenilirlik, verimlilik, kullanılabilirlik, sürdürülebilirlik, taşınabilirlik. Müşteri beklentisine göre yapılır.
+Kara Kutu Testleri:  Sistemin çalışma mantığı dikkate alınmadan fonksiyonel ve fonksiyonel olmayan şekillerde test edilmesidir. Son kullanıcı açısından kusursuz çalışmasını sağlamaktır. Kod bilgisi gerekmez
+Beyaz Kutu Testleri: Sistemin iç yapısının analizine bağlı olarak test edilmesidir. Kodların kusursuz çalışmasını sağlamaktır. Kod bilgisi şarttır
+Manuel Testler: Test uzmanlarının son kullanıcı gibi davranarak test etmesidir. Her adım ayrıntılı ve kolay test edilebilir. Captcha istenilen durumlarda avantajlıdır. Sonuca hızlı ulaşılır. Ad Hoc(Maymun) testi yapılabilir. 
+Otomasyon Testler: Testleri yazılımlarla gerçekleştirmektir. Gerçekleşen sonuçlar kaydedilebilir. 
+
+Test Stratejisi: SDLC'de kullanılacak test tekniğinin ana hatlarını barındıran, test türlerini ve seviyelerini gösteren belgedir. Sabit kalmalıdır sık değişiklik yapılmaz. Testi kimin nasıl yapacağını ve riskleri gösterir.
+Test Yaklaşımı: Test Stratejisinin hayata geçirilmesidir.
+Test Tasarım Teknikleri: Sınır değer analizleri sınır değerlerine göre tasarlanan kara kutu tekniğidir. Denklik paylarına ayırma bir sistemin farklı tarayıcılarda nasıl çalıştığını test etmek gibidir. 
+
+Geliştirme Aşamasında Testler: Birim, Entegrasyon, Sistem, Uyum, Kullanıcı Kabul testleridir.
+Unit(Birim) Testing: Bileşenlerin tek başına test edilmesidir. Sayısal olarak en fazla yapılan testtir. Beyaz kutu testidir.
+Integration(Entegrasyon) Testing: Unit testleri yapılan birimlerin birlikte sağlıklı çalışıp çalışmadığını test etmektir. Big bang testi tüm modülleri birlikte test eder. Incremental Testing kademeli olarak test eder.
+System Testing: Sistemin istenilen gereksinimleri karşılayıp karşılamadığını test eder. 50 farklı testin bir araya gelmesiyle oluşabilir. Kullanıcı bakışıyla hareket eder. 
+Compatibility(Uyum) Testing: Yazılımın sistem ile etkileşimde bulunabilmesidir. Farklı cihazlarda ve browserlarda sağlıklı çalışmasını sağlar.
+User Acceptance(Kabul) Testing: Sistemin kabul kriterlerine uygunluğu ve kullanıcıyı denetleyen resmi test aktivitesidir. Halkla ilişkiler veya pazarlama ekipleri tarafınca yapılır. 
+Alfa Testleri: Test uzmanlarının sistemin canlıya taşınmadan önce tüm özelliklerini test etmesidir.
+Beta Testleri: Kullanıcılar veya müşterilere bir sistemi sunup feedback talep etmedir.
+ 
+Kullanım Aşamasında Testler: Duman, Regresyon, Sağlık, Uçtan uca test, Kurgusuz testlerdir.
+Smoke(Duman) Testing: Bir üründe hatayı en hızlı biçimde bulmak için yapılır. Her gün yapılması önerilir. Zaman ve kaynak israfını önler.
+Regression(Gerileme) Testing: Yazılımın veya yazılım ortamının değiştiğinde sistemin çalışıp çalışmadığını test eder. Hediye kartı satın almanın sisteminin çalışmasını bozuyor mu gibi düşünülebilir.
+Sanity(Mantık) Testing: Yazılımın belirli bir işlevini, beklenen davranışları hızlıca kontrol etmektir.
+E2E(Uçtan Uca) Testing: İş süreçlerinin baştan sona test edilmesidir. Trendyol benzeri sistemin kayıt olunup satış yapana kadarki sistemden daha fazlasını test eder.
+
+Performans Testi: ApacheJmeter,LoadRunner,Gatling,BlazeMeter uygulamalarıyla testler yapılır
+Yük testi: Bir bileşenin veya sistemin artan yük karşısındaki davranışlarının testidir. Tepki süresi, İşlem hızı, Sistem kapasitesi, Hata durumları değerlendirilenileşenlerdir.
+Stress testi: Sistemin son kırılma kapasitesini ölçmektir. Sistem dayanıklılığı, Hata durumları, Sistem kurtarma, Veri Bütünlülüğü değerlendirilenileşenlerdir.
+Volume Testi: Sistemin büyük miktarda veriye tabi tutulmasıdır. Veri hacmi işleme, Depolama kapasitesi, Veri erişim performansı, Veri işleme performansı değerlendirilenileşenlerdir.
+Vulnerability(Güvenlik Açığı) Testi: Yazılımın ne kadar güvenli olduğuna dair yapılan testlerdir. Güvenlik açıkları, Saldırı senaryoları, Sistem güvenliği, Kritik bilgi koruması, Zafiyetler, Raporlama ve İyileştirme değerlendirilir.
+
+Front-End User Interface(UI)Testing: Kullanıcın yazılım, cihaz veya sistemle etkileşime girmesini sağlayan metinsel veya grafiksel arayüzlerdir.
+Selenium: Web uygulamalarını test etmek için kullanılır. Tarayıcıları otomasyona bağlar.
+Selenium Web Driver: Web uygulamalarını test etmek için kullanılan API koleksiyonudur.   Cucumber üzerinde "mvn clean verify" kodu ile aynı anda birçok test yapılabilir.
+Application Programming Interface(API): Bir uygulamanın işlevlerine uzaktan erişip kullanmasıdır. API sunucu üzerindeki uygulamaya gönderilen request(istek) ve response(cevap) ile iletişimi sağlar.
+Bir bilet rezervasyon sitesini düşünelim. En uygun bileti bir çok sitelerdeki fiyatları karşılaştırıp en ucuzunu sunması API'ler ile sağlanır. 
+Endpoint: Doğru bilgiye ulaşabileceğimiz doğru adrestir. Sağlıklı API testi için Endpoint, Yapılacak işlem, Request, HTTP metod, HTTP status code, response birimlerini kavramak ve incelemek gerekir.
+API Testing: Client tarafından request server'a gönderilir. Server expected datayı inceler. Server Actual Data geri döndürür.  
+Database: Belirli tablolar içerisinde yapılandırılmış verileri saklar. Veri depolama, Veri erişim ve kontrolü, Bilgi güvenliği işlemleri yapılabilir. 
+Database Testing: Veri tabanı bileşenlerini test etmektir.
+JDBC: java programlarının veri tabanlarıyla etkileşimde bulunmasını sağlar.
+International Software Testing Qualifications Board(ISTQB): Yazılım test serifikasyon programıdır.
+
+
+
+
+
+
+
+
+
+
